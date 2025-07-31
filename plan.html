@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>職旅計畫</title>
+    <script type="module" crossorigin src="/hex2025-layout-training-w56/assets/main-gp4orpex.js"></script>
+    <link rel="stylesheet" crossorigin href="/hex2025-layout-training-w56/assets/main-OAV7ZXZl.css">
+  </head>
+  <body>
+    <header class="custom-header sticky-top bg-white">
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center py-3"
+  >
+    <a href="#" class="d-flex align-items-center text-decoration-none">
+      <img
+        src="https://via.placeholder.com/40x40"
+        alt="Logo"
+        class="me-2 rounded-circle"
+      />
+      <span class="fs-4 fw-bold text-dark">職旅計畫</span>
+    </a>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item me-3">
+          <a class="nav-link text-secondary" href="#">個人資訊</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-secondary" href="#">我的履歷</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-secondary" href="#">我的計畫</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-secondary" href="#">聯絡我們</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="d-flex align-items-center">
+      <a href="#" class="btn btn-outline-secondary me-2">登出</a>
+      <a href="#" class="text-dark"
+        ><span class="material-symbols-outlined">account_circle</span></a
+      >
+    </div>
+  </div>
+</header>
+
+    <main class="container py-5">
+      <h1 class="h3 fw-bold mb-4">職旅計畫</h1>
+
+      <div class="card p-4 mb-4">
+        <h2 class="h5 fw-bold mb-3 plan-section-title">職旅計畫</h2>
+        <hr class="mt-0 mb-4" />
+        <form>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="travel-type" class="form-label form-label-custom"
+                >計畫類型</label
+              >
+              <select id="travel-type" class="form-select">
+                <option selected>請選擇計畫類型</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="location" class="form-label form-label-custom"
+                >出發地點</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="location"
+                placeholder="請輸入出發地點"
+              />
+            </div>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="start-date" class="form-label form-label-custom"
+                >出發日期</label
+              >
+              <input type="date" class="form-control" id="start-date" />
+            </div>
+            <div class="col-md-6">
+              <label for="end-date" class="form-label form-label-custom"
+                >結束日期</label
+              >
+              <input type="date" class="form-control" id="end-date" />
+            </div>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="people" class="form-label form-label-custom"
+                >人數</label
+              >
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="people"
+                  placeholder="請輸入人數"
+                />
+                <span class="input-group-text">人</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="plan-name" class="form-label form-label-custom"
+                >計畫名稱</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="plan-name"
+                placeholder="請輸入計畫名稱"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="travel-purpose" class="form-label form-label-custom"
+              >出發目的</label
+            >
+            <textarea
+              class="form-control"
+              id="travel-purpose"
+              rows="3"
+              placeholder="請輸入出發目的"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="card p-4 mb-4">
+        <h2 class="h5 fw-bold mb-3 plan-section-title">職旅行程</h2>
+        <hr class="mt-0 mb-4" />
+        <p class="text-secondary">
+          此區域內容需要透過動態方式生成，可以依據日期來產生對應的行程輸入框。
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-outline-primary">
+            新增行程
+          </button>
+        </div>
+      </div>
+
+      <div class="card p-4 mb-4">
+        <h2 class="h5 fw-bold mb-3 plan-section-title">備註資訊</h2>
+        <hr class="mt-0 mb-4" />
+        <p class="text-secondary">
+          此區域可以新增備註資訊，例如：注意事項、預算、住宿等。
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-outline-primary">
+            新增備註
+          </button>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end gap-2 mt-4">
+        <button type="button" class="btn btn-secondary">儲存草稿</button>
+        <button type="submit" class="btn btn-primary">送出計畫</button>
+      </div>
+    </main>
+
+    <footer class="custom-footer py-3 mt-auto">
+  <div
+    class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
+  >
+    <ul class="list-inline mb-2 mb-md-0 text-center">
+      <li class="list-inline-item">
+        <a href="#" class="text-secondary text-decoration-none small"
+          >服務條款</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <span class="text-secondary small">|</span>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="text-secondary text-decoration-none small"
+          >隱私權政策</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <span class="text-secondary small">|</span>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="text-secondary text-decoration-none small"
+          >常見問題</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <span class="text-secondary small">|</span>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="text-secondary text-decoration-none small"
+          >聯絡我們</a
+        >
+      </li>
+    </ul>
+    <span class="text-muted small text-center"
+      >&copy; 2024 Your Company. All Rights Reserved.</span
+    >
+  </div>
+</footer>
+
+  </body>
+</html>
