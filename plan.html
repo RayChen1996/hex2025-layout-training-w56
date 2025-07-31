@@ -11,7 +11,7 @@
   <body>
     <header class="custom-header sticky-top bg-white">
   <div
-    class="container-fluid d-flex justify-content-between align-items-center py-3"
+    class="container container-fluid d-flex justify-content-between align-items-center py-3"
   >
     <a href="#" class="d-flex align-items-center text-decoration-none">
       <img
@@ -24,13 +24,10 @@
     <nav>
       <ul class="nav">
         <li class="nav-item me-3">
-          <a class="nav-link text-secondary" href="#">個人資訊</a>
+          <a class="nav-link text-secondary" href="#">服務方案</a>
         </li>
         <li class="nav-item me-3">
-          <a class="nav-link text-secondary" href="#">我的履歷</a>
-        </li>
-        <li class="nav-item me-3">
-          <a class="nav-link text-secondary" href="#">我的計畫</a>
+          <a class="nav-link text-secondary" href="#">關於職旅</a>
         </li>
         <li class="nav-item me-3">
           <a class="nav-link text-secondary" href="#">聯絡我們</a>
@@ -38,7 +35,6 @@
       </ul>
     </nav>
     <div class="d-flex align-items-center">
-      <a href="#" class="btn btn-outline-secondary me-2">登出</a>
       <a href="#" class="text-dark"
         ><span class="material-symbols-outlined">account_circle</span></a
       >
@@ -46,163 +42,416 @@
   </div>
 </header>
 
-    <main class="container py-5">
-      <h1 class="h3 fw-bold mb-4">職旅計畫</h1>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- 職旅計劃概況 -->
+          <div class="form-section">
+            <h4 class="section-title">
+              職旅計劃概況
+              <span class="badge bg-danger ms-2">必填</span>
+            </h4>
 
-      <div class="card p-4 mb-4">
-        <h2 class="h5 fw-bold mb-3 plan-section-title">職旅計畫</h2>
-        <hr class="mt-0 mb-4" />
-        <form>
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <label for="travel-type" class="form-label form-label-custom"
-                >計畫類型</label
-              >
-              <select id="travel-type" class="form-select">
-                <option selected>請選擇計畫類型</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="location" class="form-label form-label-custom"
-                >出發地點</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="location"
-                placeholder="請輸入出發地點"
-              />
-            </div>
-          </div>
-
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <label for="start-date" class="form-label form-label-custom"
-                >出發日期</label
-              >
-              <input type="date" class="form-control" id="start-date" />
-            </div>
-            <div class="col-md-6">
-              <label for="end-date" class="form-label form-label-custom"
-                >結束日期</label
-              >
-              <input type="date" class="form-control" id="end-date" />
-            </div>
-          </div>
-
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <label for="people" class="form-label form-label-custom"
-                >人數</label
-              >
-              <div class="input-group">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="people"
-                  placeholder="請輸入人數"
-                />
-                <span class="input-group-text">人</span>
+            <div class="row mb-3">
+              <div class="col-md-3">
+                <label class="form-label">計劃執行時間</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="duration"
+                    id="duration1"
+                    checked
+                  />
+                  <label class="form-check-label" for="duration1">
+                    今年度執行
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">預算工作項目</label>
+                <small class="text-muted d-block">預算</small>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">自我工作項目評估</label>
+                <small class="text-muted d-block">評估</small>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">預計效益</label>
+                <small class="text-muted d-block">效益</small>
               </div>
             </div>
-            <div class="col-md-6">
-              <label for="plan-name" class="form-label form-label-custom"
-                >計畫名稱</label
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">工作業務</label>
+                <select class="form-select">
+                  <option selected>請選擇工作業務</option>
+                  <option value="1">業務開發</option>
+                  <option value="2">專案管理</option>
+                  <option value="3">技術研發</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">工作業務</label>
+                <select class="form-select">
+                  <option selected>請選擇工作業務</option>
+                  <option value="1">行銷企劃</option>
+                  <option value="2">人力資源</option>
+                  <option value="3">財務會計</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">月收入範圍</label>
+              <div class="d-flex align-items-center">
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="salary"
+                    id="salary1"
+                    checked
+                  />
+                  <label class="form-check-label" for="salary1">3萬以下</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="salary"
+                    id="salary2"
+                  />
+                  <label class="form-check-label" for="salary2">3-5萬</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="salary"
+                    id="salary3"
+                  />
+                  <label class="form-check-label" for="salary3">5-12萬</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="salary"
+                    id="salary4"
+                  />
+                  <label class="form-check-label" for="salary4">12-20萬</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="salary"
+                    id="salary5"
+                  />
+                  <label class="form-check-label" for="salary5">20萬以上</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >專業領域（複選題目請依照專業領域程度排序前3名）</label
               >
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="請描述您的專業領域..."
+              ></textarea>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">作品集網址</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fas fa-link"></i
+                  ></span>
+                  <input
+                    type="url"
+                    class="form-control"
+                    placeholder="上傳網址"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">附件檔案</label>
+                <input type="file" class="form-control" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 職涯規劃 -->
+          <div class="form-section">
+            <h4 class="section-title">
+              職涯規劃
+              <span class="badge bg-danger ms-2">必填</span>
+            </h4>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >1 年後職涯目標規劃（最多 300 字）</label
+              >
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="請描述您的1年職涯規劃..."
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >1-3 年中長期職涯規劃（最多 300 字）</label
+              >
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="請描述您的中長期職涯規劃..."
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">選擇工作型式</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="workType"
+                      id="workType1"
+                      checked
+                    />
+                    <label class="form-check-label" for="workType1">
+                      傳統朝九晚五工作
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="workType"
+                      id="workType2"
+                    />
+                    <label class="form-check-label" for="workType2">
+                      彈性工作時間（彈性）
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="workType"
+                      id="workType3"
+                    />
+                    <label class="form-check-label" for="workType3">
+                      完全遠端工作（遠端辦公）
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="workType"
+                      id="workType4"
+                    />
+                    <label class="form-check-label" for="workType4">
+                      專案型態工作（專案）
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="workType"
+                      id="workType5"
+                    />
+                    <label class="form-check-label" for="workType5">
+                      其他（請說明）
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">目標薪資收入</label>
               <input
                 type="text"
                 class="form-control"
-                id="plan-name"
-                placeholder="請輸入計畫名稱"
+                placeholder="請輸入目標薪資"
               />
             </div>
           </div>
 
-          <div class="mb-3">
-            <label for="travel-purpose" class="form-label form-label-custom"
-              >出發目的</label
-            >
-            <textarea
-              class="form-control"
-              id="travel-purpose"
-              rows="3"
-              placeholder="請輸入出發目的"
-            ></textarea>
+          <!-- 專業技能證照 -->
+          <div class="form-section">
+            <h4 class="section-title">專業技能證照</h4>
+
+            <div class="mb-3">
+              <label class="form-label">語言專業證照</label>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="lang1"
+                    />
+                    <label class="form-check-label" for="lang1">英文檢定</label>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="lang2"
+                    />
+                    <label class="form-check-label" for="lang2">日語檢定</label>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="lang3"
+                    />
+                    <label class="form-check-label" for="lang3">韓語檢定</label>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="lang4"
+                    />
+                    <label class="form-check-label" for="lang4">其他語言</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">專業技能證照（最多 300 字）</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="請描述您的專業技能證照..."
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">專業技能（最多 300 字）</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="請描述您的專業技能..."
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">直接經驗（最多 300 字）</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="請描述您的直接經驗..."
+              ></textarea>
+            </div>
           </div>
-        </form>
-      </div>
 
-      <div class="card p-4 mb-4">
-        <h2 class="h5 fw-bold mb-3 plan-section-title">職旅行程</h2>
-        <hr class="mt-0 mb-4" />
-        <p class="text-secondary">
-          此區域內容需要透過動態方式生成，可以依據日期來產生對應的行程輸入框。
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" class="btn btn-outline-primary">
-            新增行程
-          </button>
+          <!-- 教育背景 -->
+          <div class="form-section">
+            <h4 class="section-title">教育背景</h4>
+
+            <div class="mb-3">
+              <label class="form-label">專業背景（最多 300 字）</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="請描述您的專業背景..."
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">專業技能證照工作（最多 300 字）</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="請描述相關工作經驗..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- 提交按鈕 -->
+          <div class="text-center mb-4">
+            <button type="button" class="btn btn-outline-secondary me-3">
+              <i class="fas fa-file-pdf me-2"></i>匯出 PDF
+            </button>
+            <button type="submit" class="btn btn-dark px-4">
+              <i class="fas fa-save me-2"></i>儲存資料
+            </button>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="card p-4 mb-4">
-        <h2 class="h5 fw-bold mb-3 plan-section-title">備註資訊</h2>
-        <hr class="mt-0 mb-4" />
-        <p class="text-secondary">
-          此區域可以新增備註資訊，例如：注意事項、預算、住宿等。
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" class="btn btn-outline-primary">
-            新增備註
-          </button>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-end gap-2 mt-4">
-        <button type="button" class="btn btn-secondary">儲存草稿</button>
-        <button type="submit" class="btn btn-primary">送出計畫</button>
-      </div>
-    </main>
-
-    <footer class="custom-footer py-3 mt-auto">
+    <footer class="py-3 mt-auto">
   <div
-    class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
+    class="container container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
   >
     <ul class="list-inline mb-2 mb-md-0 text-center">
       <li class="list-inline-item">
         <a href="#" class="text-secondary text-decoration-none small"
-          >服務條款</a
+          >服務方案</a
         >
       </li>
-      <li class="list-inline-item">
-        <span class="text-secondary small">|</span>
-      </li>
+
       <li class="list-inline-item">
         <a href="#" class="text-secondary text-decoration-none small"
-          >隱私權政策</a
+          >關於職旅</a
         >
       </li>
-      <li class="list-inline-item">
-        <span class="text-secondary small">|</span>
-      </li>
-      <li class="list-inline-item">
-        <a href="#" class="text-secondary text-decoration-none small"
-          >常見問題</a
-        >
-      </li>
-      <li class="list-inline-item">
-        <span class="text-secondary small">|</span>
-      </li>
+
       <li class="list-inline-item">
         <a href="#" class="text-secondary text-decoration-none small"
           >聯絡我們</a
         >
       </li>
+
+      <li class="list-inline-item">
+        <a href="#" class="text-secondary text-decoration-none small"
+          >隱私權政策</a
+        >
+      </li>
+
+      <li class="list-inline-item">
+        <a href="#" class="text-secondary text-decoration-none small"
+          >用戶條款</a
+        >
+      </li>
     </ul>
-    <span class="text-muted small text-center"
-      >&copy; 2024 Your Company. All Rights Reserved.</span
-    >
+    <span class="text-muted small text-center">
+      Copyright © 2025 職旅 workway. All rights reserved.
+    </span>
   </div>
 </footer>
 
