@@ -1,0 +1,28 @@
+.banner {
+  background-image: url("../../images/bb21ce989b00dadd0391de02fe651b0db56bd381.png");
+
+  text-align: center;
+
+  position: relative;
+}
+.deco-l-d {
+  display: none;
+}
+.deco-r-u {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .deco-l-d {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .deco-r-u {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
