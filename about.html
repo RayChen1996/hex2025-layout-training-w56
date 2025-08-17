@@ -4,9 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about</title>
-    <script type="module" crossorigin src="/hex2025-layout-training-w56/assets/main-VUrHU10F.js"></script>
-    <link rel="stylesheet" crossorigin href="/hex2025-layout-training-w56/assets/main-BEThRx6q.css">
+
+    <!-- 引入 Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <title>關於職旅 | 職旅 WorkWay</title>
+    <script type="module" crossorigin src="/hex2025-layout-training-w56/assets/main-DYWXyJQN.js"></script>
+    <link rel="stylesheet" crossorigin href="/hex2025-layout-training-w56/assets/main-CuT4S1u1.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,7 +59,206 @@
     </a>
   </div>
 </nav>
-    <h1>我是about</h1>
+    <section class="banner">
+      <h1>關於職旅</h1>
+      <img src="data:image/png;base64,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" alt="" class="deco-l-d" />
+      <img src="data:image/png;base64,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" alt="" class="deco-r-u" />
+      <p class="mt-5">
+        職旅 WorkWay
+        匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。根據你的
+        <br />
+        需求和階段，我們提供一對一諮詢。
+      </p>
+      <p>
+        無論你是剛開始探索期，還是已在轉型路上遇到瓶頸，我們都能提供適合你的專業指導。
+      </p>
+      <img src="/hex2025-layout-training-w56/assets/Girl-C3Ql-XWz.png" alt="" />
+    </section>
+
+    <section class="team-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark mt-10 mb-4">
+              精實的職旅夥伴
+            </h2>
+            <p class="lead text-muted">
+              我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。
+            </p>
+          </div>
+        </div>
+
+        <!-- Swiper 區塊開始 -->
+        <div class="swiper mb-5">
+          <div class="swiper-wrapper">
+            <!-- Team Member 1 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="/hex2025-layout-training-w56/assets/mentor-1-DzIVfJbW.png"
+                  alt="陳志遠"
+                />
+                <div class="card-body">
+                  <div class="team-name">陳志遠 Ethan Chen</div>
+                  <div class="team-title">數位行銷專家</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="/hex2025-layout-training-w56/assets/mentor-2-BTK6GYqW.png"
+                  alt="林佳音"
+                />
+                <div class="card-body">
+                  <div class="team-name">林佳音 Olivia Lin</div>
+                  <div class="team-title">品牌策略顧問</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="/hex2025-layout-training-w56/assets/mentor-3-CU1P0TLf.png"
+                  alt="王建宏"
+                />
+                <div class="card-body">
+                  <div class="team-name">王建宏 Marcus</div>
+                  <div class="team-title">技術架構師</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="/hex2025-layout-training-w56/assets/mentor-4-DPZMYEV9.png"
+                  alt="張明德"
+                />
+                <div class="card-body">
+                  <div class="team-name">張明德 Mark</div>
+                  <div class="team-title">商業開發總監</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="/hex2025-layout-training-w56/assets/mentor-5-g4i84-rV.png"
+                  alt="李承翰"
+                />
+                <div class="card-body">
+                  <div class="team-name">李承翰 Kevin Lee</div>
+                  <div class="team-title">財務規劃師</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="/hex2025-layout-training-w56/assets/mentor-6-B-OBw_VO.png"
+                  alt="專業顧問"
+                />
+                <div class="card-body">
+                  <div class="team-name">更多專家</div>
+                  <div class="team-title">各領域專業人士</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper 導航箭頭 -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Swiper 分頁圓點 -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">準備開始您的職業轉型之旅了嗎？</h2>
+          <p class="lead mb-5">
+            讓我們經驗豐富的專家團隊，為您量身打造最適合的職涯發展策略。
+            無論您處於哪個階段，我們都能提供專業的指導與支持。
+          </p>
+          <button class="btn btn-custom btn-lg px-5">
+            <i class="fas fa-calendar-alt me-2"></i>立即預約諮詢
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark">公司資訊</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Contact Info -->
+          <div class="col-lg-12 mb-4">
+            <div class="info-card">
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-building"></i
+                  ><strong>公司名稱：</strong>職旅數位行銷顧問有限公司
+                </p>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i
+                  ><strong>地址：</strong>台北市
+                </p>
+                <p>
+                  <i class="fas fa-phone"></i><strong>聯絡電話：</strong>+886
+                  123-456-789
+                </p>
+                <p>
+                  <i class="fas fa-envelope"></i
+                  ><strong>電子信箱：</strong>contact@workway.com.tw
+                </p>
+                <p>
+                  <i class="fas fa-clock"></i
+                  ><strong>營業時間：</strong>週一至週五 9:00-18:00
+                </p>
+                <p>
+                  <i class="fas fa-calendar"></i
+                  ><strong>成立時間：</strong>2020年1月
+                </p>
+                <p>
+                  <i class="fas fa-users"></i><strong>員工人數：</strong>20-50人
+                </p>
+                <p>
+                  <i class="fas fa-globe"></i
+                  ><strong>網站：</strong>www.workway.com.tw
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="col-lg-12 mb-4">
+            <div class="info-card">
+              <div class="map-container">
+                <img src="/hex2025-layout-training-w56/assets/map-mOP65bZF.png" alt="地圖" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="py-3 mt-auto">
   <div
     class="container container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
@@ -94,5 +304,25 @@
   </div>
 </footer>
 
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+          1200: { slidesPerView: 5 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
