@@ -4,13 +4,243 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入 Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <title>關於職旅 | 職旅 WorkWay</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是about</h1>
+    <section class="banner">
+      <h1>關於職旅</h1>
+      <img src="../assets/images/deco_left_down.png" alt="" class="deco-l-d" />
+      <img src="../assets/images/deco_right_up.png" alt="" class="deco-r-u" />
+      <p class="mt-5">
+        職旅 WorkWay
+        匯集了來自不同領域、擁有豐富實戰經驗的自由工作者與數位遊牧專家。根據你的
+        <br />
+        需求和階段，我們提供一對一諮詢。
+      </p>
+      <p>
+        無論你是剛開始探索期，還是已在轉型路上遇到瓶頸，我們都能提供適合你的專業指導。
+      </p>
+      <img src="../assets//images/Girl.png" alt="" />
+    </section>
+
+    <section class="team-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark mt-10 mb-4">
+              精實的職旅夥伴
+            </h2>
+            <p class="lead text-muted">
+              我們相信，最好的指導來自於那些已經走過你想走的路，並願意伸出手拉你一把的人。
+            </p>
+          </div>
+        </div>
+
+        <!-- Swiper 區塊開始 -->
+        <div class="swiper mb-5">
+          <div class="swiper-wrapper">
+            <!-- Team Member 1 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="../assets/images/about/mentor-1.png"
+                  alt="陳志遠"
+                />
+                <div class="card-body">
+                  <div class="team-name">陳志遠 Ethan Chen</div>
+                  <div class="team-title">數位行銷專家</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="../assets/images/about/mentor-2.png"
+                  alt="林佳音"
+                />
+                <div class="card-body">
+                  <div class="team-name">林佳音 Olivia Lin</div>
+                  <div class="team-title">品牌策略顧問</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="../assets/images/about/mentor-3.png"
+                  alt="王建宏"
+                />
+                <div class="card-body">
+                  <div class="team-name">王建宏 Marcus</div>
+                  <div class="team-title">技術架構師</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="../assets/images/about/mentor-4.png"
+                  alt="張明德"
+                />
+                <div class="card-body">
+                  <div class="team-name">張明德 Mark</div>
+                  <div class="team-title">商業開發總監</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="swiper-slide">
+              <div class="card rounded-3 shadow">
+                <img
+                  class="card-img-top"
+                  src="../assets/images/about/mentor-5.png"
+                  alt="李承翰"
+                />
+                <div class="card-body">
+                  <div class="team-name">李承翰 Kevin Lee</div>
+                  <div class="team-title">財務規劃師</div>
+                </div>
+              </div>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="../assets/images/about/mentor-6.png"
+                  alt="專業顧問"
+                />
+                <div class="card-body">
+                  <div class="team-name">更多專家</div>
+                  <div class="team-title">各領域專業人士</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper 導航箭頭 -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Swiper 分頁圓點 -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">準備開始您的職業轉型之旅了嗎？</h2>
+          <p class="lead mb-5">
+            讓我們經驗豐富的專家團隊，為您量身打造最適合的職涯發展策略。
+            無論您處於哪個階段，我們都能提供專業的指導與支持。
+          </p>
+          <button class="btn btn-custom btn-lg px-5">
+            <i class="fas fa-calendar-alt me-2"></i>立即預約諮詢
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark">公司資訊</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Contact Info -->
+          <div class="col-lg-12 mb-4">
+            <div class="info-card">
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-building"></i
+                  ><strong>公司名稱：</strong>職旅數位行銷顧問有限公司
+                </p>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i
+                  ><strong>地址：</strong>台北市
+                </p>
+                <p>
+                  <i class="fas fa-phone"></i><strong>聯絡電話：</strong>+886
+                  123-456-789
+                </p>
+                <p>
+                  <i class="fas fa-envelope"></i
+                  ><strong>電子信箱：</strong>contact@workway.com.tw
+                </p>
+                <p>
+                  <i class="fas fa-clock"></i
+                  ><strong>營業時間：</strong>週一至週五 9:00-18:00
+                </p>
+                <p>
+                  <i class="fas fa-calendar"></i
+                  ><strong>成立時間：</strong>2020年1月
+                </p>
+                <p>
+                  <i class="fas fa-users"></i><strong>員工人數：</strong>20-50人
+                </p>
+                <p>
+                  <i class="fas fa-globe"></i
+                  ><strong>網站：</strong>www.workway.com.tw
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="col-lg-12 mb-4">
+            <div class="info-card">
+              <div class="map-container">
+                <img src="../assets/images/about/map.png" alt="地圖" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+          1200: { slidesPerView: 5 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
