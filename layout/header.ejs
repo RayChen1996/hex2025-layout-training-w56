@@ -4,30 +4,62 @@
       <img src="/assets/images/logo.svg" alt="logo" />
     </a>
     <button
-      class="navbar-toggler"
+      class="navbar-toggler border-0"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasTop"
+      aria-controls="offcanvasTop"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item me-3">
-          <a class="nav-link" href="service.html">服務方案</a>
-        </li>
-        <li class="nav-item me-3">
-          <a class="nav-link" href="about.html">關於職旅</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">聯絡我們</a>
-        </li>
-      </ul>
+
+    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-none d-md-flex">
+      <li class="nav-item me-3 text-center mb-4">
+        <a class="nav-link" href="service.html">服務方案</a>
+      </li>
+      <li class="nav-item me-3 text-center mb-4">
+        <a class="nav-link" href="about.html">關於職旅</a>
+      </li>
+      <li class="nav-item me-3 text-center">
+        <a class="nav-link" href="contact.html">聯絡我們</a>
+      </li>
+    </ul>
+    <div
+      class="offcanvas offcanvas-top min-vh-100 d-flex d-md-none"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item me-3 text-center mb-4">
+            <a class="nav-link" href="service.html">服務方案</a>
+          </li>
+          <li class="nav-item me-3 text-center mb-4">
+            <a class="nav-link" href="about.html">關於職旅</a>
+          </li>
+          <li class="nav-item me-3 text-center">
+            <a class="nav-link" href="contact.html">聯絡我們</a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-footer d-flex justify-content-center mb-4 mx-2">
+        <button type="button" class="btn btn-primary w-100 rounded-5">
+          登入/註冊
+        </button>
+      </div>
     </div>
-    <a href="plan.html">
+    <a class="d-none d-md-block" href="plan.html">
       <img
         src="/assets/images/avatar.png"
         class="member-avator border me-2 rounded-circle"

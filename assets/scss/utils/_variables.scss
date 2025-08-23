@@ -6,7 +6,7 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white: #fff !default;
+$white: #fcfcfd !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -16,8 +16,34 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black: #000 !default;
+$black: #141a1f !default;
 // scss-docs-end gray-color-variables
+
+$Secondary-90: #d7f4ec !default;
+$Secondary-70: #87dec5 !default;
+$Secondary-50: #36c99f !default;
+$Secondary-35: #268c6f !default;
+
+$Natural-95: #f0f3f5 !default;
+$Natural-90: #e0e5eb !default;
+$Natural-85: #d1d9e1 !default;
+$Natural-75: #868a90 !default;
+$Natural-60: #b2bfcc !default;
+$Natural-50: #667f99 !default;
+$Natural-30: #3d4d5c !default;
+$Natural-10: #141a1f !default;
+
+$Success_90: #defccf !default;
+$Success_40: #47c20a !default;
+$Success_30: #369108 !default;
+
+$Danger_90: #ffd0cc !default;
+$Danger_70: #ff7467 !default;
+$Danger_35: #e51300 !default;
+
+$Warning_90: #ffeacc !default;
+$Warning_48: #f58f00 !default;
+$Warning_35: #b26800 !default;
 
 // fusv-disable
 // scss-docs-start gray-colors-map
@@ -36,7 +62,8 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue: #0d6efd !default;
+// $blue: #0d6efd !default;
+$blue: #4a69e8 !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -48,9 +75,17 @@ $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
 // scss-docs-end color-variables
 
+$primary_97: #f1f4fd !default;
+$primary_90: #d2d9f9 !default;
+$primary_80: #a4b4f3 !default;
+$primary_70: #778eee !default;
+$primary_60: #3c57e5 !default;
+$primary_40: #2e3ab4 !default;
+$primary_25: #1f246e !default;
+
 // scss-docs-start colors-map
 $colors: (
-  "blue": $blue,
+  "blue": $primary_60,
   "indigo": $indigo,
   "purple": $purple,
   "pink": $pink,
@@ -299,7 +334,7 @@ $cyans: (
 
 // scss-docs-start theme-color-variables
 $primary: $blue !default;
-$secondary: $gray-600 !default;
+$secondary: $Secondary-50 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -310,8 +345,8 @@ $dark: $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
+  "primary": $primary_60,
+  "secondary": $Secondary-50,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -319,6 +354,14 @@ $theme-colors: (
   "light": $light,
   "dark": $dark,
 ) !default;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "global-text-primary": $black,
+    "global-text-secondary": $Natural-50,
+  )
+);
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-text-variables
@@ -628,8 +671,17 @@ $font-family-code: var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xs: $font-size-base * 0.75 !default;
 $font-size-sm: $font-size-base * 0.875 !default;
-$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-md: $font-size-base !default;
+$font-size-lg: $font-size-base * 1.125 !default;
+$font-size-xl: $font-size-base * 1.25 !default;
+
+$font-size-2xl: $font-size-base * 1.5 !default;
+
+$font-size-3xl: $font-size-base * 1.75 !default;
+$font-size-4xl: $font-size-base * 2 !default;
+$font-size-5xl: $font-size-base * 3 !default;
 
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
